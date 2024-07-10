@@ -1,0 +1,436 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea {
+	font-size: 100%;
+	vertical-align: middle;
+}
+
+img {
+	border-style: none;
+	display: block;
+}
+
+hr {
+	display: none;
+}
+
+em {
+	font-style: normal
+}
+
+input {
+	line-height: auto;
+	vertical-align: middle;
+}
+
+strong.more {
+	color: #c30
+}
+
+a {
+	text-decoration: none;
+}
+
+
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+/* ページ土台 */
+.main_page {
+	display: flex;
+	flex-direction: column;
+	background-color: #FFEFD5;
+	align-items: center;
+	width: 100%;
+}
+
+
+
+/* ヘッダー(PC画面) */
+.header-pc{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	background-color: lightgray;
+}
+
+.header-pc-list{
+	display: flex;
+	align-items: center;
+}
+
+.header-pc-list div:nth-child(1){
+	margin-right: 10px;
+}
+
+.header-pc-list div:nth-child(2),
+.header-pc-list div:nth-child(3),
+.header-pc-list div:nth-child(4){
+	margin-right: 10px;
+	color: dimgray;
+}
+
+.search-text-pc,
+.search-button-pc{
+	border: none;
+	border-radius: 5px;
+	margin-right: 1px;
+}
+
+.search-text-pc{
+	color: dimgray;
+}
+
+
+
+
+
+/* ヘッダー(SP画面) */
+.header-sp{
+	background-color: lightgrey;
+	width: 100%;
+	display: none;
+}
+
+.header-sp-top{
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-sp{
+	position: relative;
+	width: 10%;
+	border-radius: 5px;
+	border-color: orange;
+	outline: solid 1px;
+	outline-color: white;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+}
+
+.menu-sp div{
+	position: absolute;
+	height: 3px;
+	width: 50%;
+	background-color: dimgray;
+}
+
+.menu-sp div:nth-child(1){
+	bottom: 75%;
+}
+.menu-sp div:nth-child(2){
+	bottom: 50%;
+}
+.menu-sp div:nth-child(3){
+	bottom: 25%;
+}
+
+.header-sp-list{
+	display: flex;
+	flex-direction: column;
+	display: none;
+}
+
+.header-sp-list div:nth-child(1){
+	margin-bottom: 10px;
+}
+.header-sp-list div:nth-child(2),
+.header-sp-list div:nth-child(3),
+.header-sp-list div:nth-child(4){
+	margin-bottom: 10px;
+	color: dimgray;
+}
+
+.search{
+	display: flex;
+	justify-content: space-around;
+}
+.search-text{
+	width: 79%;
+	border: none;
+	margin-bottom: 2px;
+	border-radius: 5px;	
+}
+.search-button{
+	width: 20%;
+	border: none;
+	margin-bottom: 2px;
+	border-radius: 5px;
+}
+
+
+
+/* スマホサイズならヘッダーをハンバーガーメニューに切り替え */
+@media (max-width:767px){	
+	.header-sp{
+		display: block;
+	}
+	.header-pc{
+		display: none;
+	}
+}
+
+
+
+/* スライドショー(PC画面) */
+.swiper{
+	display: flex;
+	width: 100%;
+}
+.swiper-slide img {
+	width: 100%;
+	aspect-ratio: 4/3;
+	padding-bottom: 12px;
+} 
+
+/* スライドショー(SP画面) */
+@media (max-width:767px){
+	.swiper {
+		display: flex;
+		width: 100%;
+		margin-top: 10px;
+	}
+	
+	.swiper-slide img {
+		height: auto;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		aspect-ratio: 4/3;
+	}
+}
+
+
+
+
+/* 有効表示範囲の設定 */
+.displaySpace {
+	background-color: #FFEFD5;
+	width: 70%;
+	letter-spacing: 0.1em;
+}
+
+
+
+/* アコーディオンメニューボタン */
+.title_1,
+.title_2,
+.title_3 {
+	display: flex;
+	align-items: center;
+	background-color: #FFC7AF;
+	width: 100%;
+	height: 50px;
+	border: none;
+	margin-bottom: 5px;
+}
+
+
+
+/* アコーディオンメニュー */
+.detail_1,
+.detail_2,
+.detail_3 {
+	display: none;
+}
+
+
+
+/* フェードイン処理 */
+.fadein,
+.fadein-2 {
+	opacity: 0;
+	transform: translate(0, 100px);
+	transition: all 1s;
+}
+
+.fadein.active,
+.fadein-2.active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+
+
+/* おすすめ商品写真＆説明文 */
+.category {
+	margin-top: 30px;
+	margin-left: 2%;
+}
+
+.SignatureFood,
+.ourCoffee,
+.ourFood {
+	display: flex;
+	justify-content: center;
+}
+
+.SignatureFood_box,
+.ourCoffee_box,
+.ourFood_box {
+	width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+
+
+/* ショップインフォメーション */
+.shopInformation {
+	display: flex;
+	justify-content: space-around;
+	background-color: black;
+	margin-top: 30px;
+}
+
+.shopInformation_sentence {
+	color: white;
+	width: 45%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.information_img {
+	width: 45%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	object-fit: cover;
+}
+
+
+
+/* 店舗一覧 */
+.shopList {
+	margin-top: 30px;
+}
+
+.shopList_box {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.shopList_img {
+	width: 20%;
+	object-fit: cover;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+.shopAddress_box {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+
+
+/* フッター */
+hooter {
+	display: flex;
+	width: 100%;
+	height: 80px;
+	background-color: darkgrey;
+	align-items: center;
+	justify-content: center;
+	gap: 1%;
+	margin-top: 30px;
+}
+
+
+
+/* スマホサイズなら要素を縦並びに変更 */
+@media (max-width:767px) {
+	.shopInformation {
+		display: flex;
+		flex-direction: column;
+
+		background-color: black;
+		margin-top: 30px;
+		height: 500px;
+	}
+
+	.shopInformation_sentence {
+		color: white;
+		height: 50%;
+		width: 100%;
+		background-color: black;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.information_img {
+		height: 50%;
+		width: 100%;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		object-fit: cover;
+	}
+
+	.SignatureFood_box,
+	.ourCoffee_box,
+	.ourFood_box {
+		width: 100%;
+		height: 50%;
+	}
+
+	.SignatureFood,
+	.ourCoffee,
+	.ourFood {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.shopList,
+	.shopList_box,
+	.shopList_img,
+	.shopAddress_box {
+		display: none;
+	}
+}

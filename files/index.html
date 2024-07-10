@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casteria</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+  <!-- 土台 -->
+  <div class="main_page">
+
+    <!-- ヘッダー(PC画面) -->
+    <header class="header header-pc">
+      <h1>Casteria</h1>
+      <div class="header-pc-list">
+        <div>Home</div>
+        <div>Food</div>
+        <div>Drink</div>
+        <div>お問い合わせ</div>
+        <div class="search">
+          <input type="text" value="Search" class="search-text-pc">
+          <button class="search-button-pc">Search</button>
+        </div>
+    </header>
+
+
+
+    <!-- ヘッダー(SP画面) -->
+    <header class="header header-sp">
+      <div class="header-sp-top">
+        <h1>Casteria</h1>
+        <button class="menu-sp">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </div>
+      <div class="header-sp-list">
+        <div>Home</div>
+        <div>Food</div>
+        <div>Drink</div>
+        <div>お問い合わせ</div>
+        <div class="search">
+          <input type="text" value="Search" class="search-text">
+          <button class="search-button">Search</button>
+        </div>
+      </div>
+    </header>
+
+
+
+
+    
+
+
+    <!-- スライドショー -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/restaurant.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/food.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/food2.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/interior.jpg" alt="" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- 土台より少し狭い表示範囲 -->
+    <div class="displaySpace">
+
+      <h1 class="text1">新型コロナウイルスに対する取り組みの最新情報をご案内</h1>
+
+      <!-- アコーディオンメニュー -->
+      <h4><button class="title_1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-square-fill" viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+          </svg>衛生面に対して</button></h4>
+
+      <div class="detail_1">
+        <div>・マスクを着用しての接客</div>
+        <div>・出勤前の検温の徹底</div>
+        <div>・レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置</div>
+        <div>・より頻度の高い手洗いの励行</div>
+        <div>・テーブルにお客様用の消毒用アルコールの設置</div>
+        <div>・従業員間の距離確保の為、休憩や研修時の客席利用</div>
+      </div>
+
+      <h4><button class="title_2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-square-fill" viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+          </svg>お客様へのご協力のお願い</button></h4>
+
+      <div class="detail_2">
+        <div>・店内では、飲食時以外のマスク着用をお願いいたします</div>
+        <div>・入店時の手指の消毒にご協力ください</div>
+        <div>・レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</div>
+        <div>・多数でお越しの際は、お一人がまとめてご注文願います(混雑時に入場制限をする場合がございます)</div>
+        <div>・発熱や体調不良の際はご入店をお控えください</div>
+      </div>
+
+      <h4><button class="title_3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-square-fill" viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+          </svg>サービスに関して</button></h4>
+
+      <div class="detail_3">
+        <div>・直接お渡しする商品の提供、金銭授受時にグローブの着用</div>
+        <div>・ドリンクやフードのサンプリング中止</div>
+        <div>・地域活動・イベントの中止</div>
+        <div>・混雑時間帯の客席の譲り合いへのご協力お願いの実施</div>
+        <div>・店内設置しているミルク、はちみつ、パウダー類の一時引き下げ</div>
+        <div>・混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</div>
+      </div>
+
+      <!-- 商品説明(スクロールで表示) -->
+      <div class="fadein">
+        <h4 class="category">Signature Food</h4>
+        <div class="SignatureFood">
+          <img class="SignatureFood_box" src="img/food.jpg" alt="">
+          <div class="SignatureFood_box">
+            サーモンは刺身やカルパッチョで食べるのが美味しいですが、
+            リッチな気分になれるサーモンステーキがおすすめです。
+            サーモンの美味しさを引き立てる2種のソースも絶品です!
+          </div>
+        </div>
+      </div>
+
+      <div class="fadein">
+        <h4 class="category">Our Coffee</h4>
+        <div class="ourCoffee">
+          <img class="ourCoffee_box" src="img/barista.jpg" alt="">
+          <div class="ourCoffee_box">
+            当店のコーヒー豆は厳選して世界中から買い付けています。
+            そして、そのコーヒー豆の美味しさを最大限に引き出すために
+            自社のロースタリーで焙煎しています。
+          </div>
+        </div>
+      </div>
+
+      <div class="fadein">
+        <h4 class="category">Our Food</h4>
+        <div class="ourFood">
+          <img class="ourFood_box" src="img/food3.jpg" alt="">
+          <div class="ourFood_box">
+            当店は何よりまずは衛生管理に気を付けています。
+            「安全・安心」をお届けするために日々継続的な努力を惜しみません。
+          </div>
+        </div>
+      </div>
+
+      <!-- ショップインフォメーション(スクロールで表示) -->
+      <div class="fadein">
+        <div class="shopInformation">
+          <div class="shopInformation_sentence">
+            <h4>Address</h4>
+            <div><small>681 xxxx Drive, xxxxx xxxx #01 - 06 000000</small></div>
+            <div><small>Openinng Hours</small></div>
+            <h4>Mondays - Friday:10am - 9pm</h4>
+            <div><small>Saturdays,Sundays, & Public Holidays:9am - 9pm</small></div>
+          </div>
+          <img class="information_img" src="img/barista.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- 店舗一覧画像(スクロールで表示) -->
+      <div class="fadein">
+        <h3 class="shopList" style="text-align: center;">店舗一覧</h3>
+        <div class="shopList_box">
+          <img class="shopList_img" src="img/restaurant2.jpg" alt="">
+          <img class="shopList_img" src="img/restaurant3.jpg" alt="">
+          <img class="shopList_img" src="img/restaurant4.jpg" alt="">
+          <img class="shopList_img" src="img/restaurant5.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- 各店舗住所(スクロールで表示) -->
+      <div class="fadein-2">
+        <div class="shopAddress_box">
+          <div class="shopAddress">
+            <small><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>東京都渋谷区xxxxx xxxxx</small>
+          </div>
+          <div class="shopAddress">
+            <small><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>千葉県松戸市xxxxx xxxxx</small>
+          </div>
+          <div class="shopAddress">
+            <small><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>神奈川県横浜市xxxxx xxxxx</small>
+          </div>
+          <div class="shopAddress">
+            <small><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>埼玉県川越市xxxxx xxxxx</small>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- 狭い表示範囲終わり -->
+
+    <!-- フッター -->
+    <hooter>
+      <div>プライバシーポリシー</div>
+      <div>お問い合わせ</div>
+      <div>運営会社</div>
+    </hooter>
+
+  </div><!-- 土台終わり -->
+
+  <script src="js/script.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</body>
+
+</html>
